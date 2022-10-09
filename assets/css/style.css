@@ -363,29 +363,28 @@ body{
     border-radius: 0 100% 100% 100%;
     background-color: #fff;
     position: absolute;
-    top: 85%;
+    top: 72%;
     animation: drop 3s infinite both;
   }
-  /* .drop:nth-child(1) {
-    left: 40%;
+  .drop:nth-child(1) {
+    left: 18%;
   }
   .drop:nth-child(2) {
-    left: 58%;
+    left: 20%;
     animation-delay: -0.4s;
   }
   .drop:nth-child(3) {
-    left: 61.3%;
+    left: 30%;
     animation-delay: -1.5s;
-  } */
-  .drop:nth-child(2) {
-    left: 64.5%;
+  }
+  .drop:nth-child(4) {
+    left: 82%;
     animation-delay: -0.8s;
   }
-
-  /* .drop:nth-child(5) {
+  .drop:nth-child(5) {
     left: 95.5%;
     animation-delay: -1.3s;
-  } */
+  }
   
   @keyframes drop {
     0% {
