@@ -310,6 +310,19 @@ body{
       bottom: 100px;
       font-size: 10px;
     }
+    
+    .collapse{
+      background: #000; padding: 0 20px
+    }
+
+    .navbar li a{
+      color: #fff;
+    }
+
+    .navbar li .btn{
+      margin: 10px 0 20px 0;
+      width: 110%
+    }
 
     .senshi{
       font-size: 50px;
