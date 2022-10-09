@@ -119,7 +119,10 @@ body{
     color: #fff;
   }
 
-  video::-webkit-media-controls{display: none !important;}
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
 /*   
   @media (max-width: 750px) {
       #background-video { display: none; }
