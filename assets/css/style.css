@@ -363,7 +363,7 @@ body{
     border-radius: 0 100% 100% 100%;
     background-color: #fff;
     position: absolute;
-    top: 72%;
+    top: 73%;
     animation: drop 3s infinite both;
   }
   .drop:nth-child(1) {
@@ -374,7 +374,7 @@ body{
     animation-delay: -0.4s;
   }
   .drop:nth-child(3) {
-    left: 30%;
+    left: 29%;
     animation-delay: -1.5s;
   }
   .drop:nth-child(4) {
