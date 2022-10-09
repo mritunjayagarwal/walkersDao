@@ -24,7 +24,7 @@ body{
 
   .heading{
     position: fixed;
-    bottom: 130px;
+    top: 200px;
     left: 80px;
     font-size: 20px;
     text-shadow: 0 0 3px #000, 5px 5px 5px #000;
@@ -313,7 +313,7 @@ body{
 
     .heading{
       left: 10px;
-      bottom: 100px;
+      top: 450px;
       font-size: 10px;
     }
   
