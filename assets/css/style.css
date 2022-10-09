@@ -313,7 +313,8 @@ body{
 
     .heading{
       left: 10px;
-      top: 450px;
+      top: unset;
+      bottom: 100px;
       font-size: 10px;
     }
   
@@ -343,5 +344,15 @@ body{
     .nav-brand{
       padding: 10px 30px;
       font-size: 10px;
+    }
+  }
+  @media only screen and (max-width: 667px) and (max-height: 900px) {
+    .heading{
+      top: 450px;
+    }
+  }
+  @media only screen and (max-width: 667px) and (max-height: 800px)  {
+    .heading{
+      top: 300px;
     }
   }
