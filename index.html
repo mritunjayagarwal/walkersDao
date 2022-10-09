@@ -24,14 +24,15 @@
         <source src="./nightwalkers.mp4" type="video/mp4">
       </video>
 
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="myNav" class="overlay p-5">
+        <div style = "border: 5px solid #fff;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
           <div class = "container">
             <div class = "row">
               <div class = "col-lg-6">
                 <video autoplay loop muted poster="./assets/img/ninja.png" class = "img-fluid">
-                  <source src="./ninja1.mp4" type="video/mp4">
+                  <source src="./nightwalkers.mp4" type="video/mp4">
                 </video>
               </div>
               <div class = "col-lg-6">
@@ -52,13 +53,8 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
-      <ul id="menu-ul" class = "menu-ul">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Buy</a></li>
-        <li id = "about"><a href="#">About Senshi</a></li>
-        <!-- <li id = "about" style = "color: #fff;">About Senshi</li> -->
-      </ul>
       <div class = "heading">
         <h2 class = "senshi">SOMETHING <br /> WICKED COMING <br />THIS WAY...</h2>
       </div>
@@ -67,12 +63,12 @@
             <a class="navbar-brand text-black" href="#">Night Walkers</a>
             <button class="navbar-toggler" style = "border: none;" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars" style = "color: #000"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="me-auto navbar-nav" style = "margin: 0 auto;">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" id = "about" href="#">About</a>
                     </li>
                     <li class="nav-item twitter">
                         <a class="nav-link"
@@ -104,9 +100,6 @@
           <div>
             <p class = "tokenomics" style = "font-size: 35px;margin-top: 10px;">Locked Liquidity | Ownership Renounced | Low Tax</p>
           </div>
-          <div style = "margin: 0 30px;" class = "ham-menu">
-            <i class = "fa fa-bars" id = "menu-click" style = "color: #fff;font-size: 30px;margin-top: 0;cursor: pointer;"></i>
-          </div>
         </div> 
       </nav>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -133,86 +126,15 @@
         $("#menu-ul").toggleClass("menu-visible");
       });
 
-      $("#about").click(function(){
-        document.getElementById("myNav").style.width = "100%";
-      });
+      $("#about").click(function () {
+            document.getElementById("myNav").style.display = "block";
+        });
 
 
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
 
-
-      function setupTypewriter(t) {
-      var HTML = t.innerHTML;
-
-      t.innerHTML = "";
-
-      var cursorPosition = 0,
-          tag = "",
-          writingTag = false,
-          tagOpen = false,
-          typeSpeed = 100,
-        tempTypeSpeed = 0;
-
-      var type = function() {
-        
-          if (writingTag === true) {
-              tag += HTML[cursorPosition];
-          }
-
-          if (HTML[cursorPosition] === "<") {
-              tempTypeSpeed = 0;
-              if (tagOpen) {
-                  tagOpen = false;
-                  writingTag = true;
-              } else {
-                  tag = "";
-                  tagOpen = true;
-                  writingTag = true;
-                  tag += HTML[cursorPosition];
-              }
-          }
-          if (!writingTag && tagOpen) {
-              tag.innerHTML += HTML[cursorPosition];
-          }
-          if (!writingTag && !tagOpen) {
-              if (HTML[cursorPosition] === " ") {
-                  tempTypeSpeed = 0;
-              }
-              else {
-                  tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-              }
-              t.innerHTML += HTML[cursorPosition];
-          }
-          if (writingTag === true && HTML[cursorPosition] === ">") {
-              tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-              writingTag = false;
-              if (tagOpen) {
-                  var newSpan = document.createElement("span");
-                  t.appendChild(newSpan);
-                  newSpan.innerHTML = tag;
-                  tag = newSpan.firstChild;
-              }
-          }
-
-          cursorPosition += 1;
-          if (cursorPosition < HTML.length - 1) {
-              setTimeout(type, tempTypeSpeed);
-          }
-
-      };
-
-      return {
-          type: type
-      };
-  }
-
-  var typer = document.getElementById('typewriter');
-
-  typewriter = setupTypewriter(typewriter);
-
-  typewriter.type();
     </script>
 </body>
 </html>
